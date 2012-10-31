@@ -5,6 +5,7 @@ gem 'rails', '3.2.8'
 group :development, :test do
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.11.0'
+  gem 'bootstrap-sass','2.0.4'
   gem 'guard-rspec', '1.2.1'
    gem 'wdm', '~> 0.0.3'
 end
