@@ -1,24 +1,9 @@
-<h1>Users</h1>
+<% provide(:title, 'All users') %>
+<h1>All Users</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<%= will_paginate %>
+<ul class="users">
+   <%= render @users %>
+</ul>
 
-<% @users.each do |u| %>
-  <tr>
-    <td><%= link_to u.name,u %></td>
-    
-   
-    <td><%= link_to 'Delete', u, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New User', new_user_path %>
+<%= will_paginate %>
