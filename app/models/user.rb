@@ -26,6 +26,9 @@ class User < ActiveRecord::Base
   validates :email, presence: true,  email: true , uniqueness: {case_sensitive: false}
   validates :password, presence: true, length: {minimum: 6}
   validates :password_confirmation, presence: true, length: {minimum: 6}
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
   private
     #Because of the way Active Record synthesizes attributes based on database columns,
     # without self the assignment would create a local variable called remember_token, which

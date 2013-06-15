@@ -1,4 +1,5 @@
 require 'spec_helper'
+
 describe "Authentication" do
   subject { page }
   describe "signin page" do
@@ -96,7 +97,6 @@ describe "Authentication" do
           specify { response.should redirect_to(signin_path)}
         end
       end
-
       describe "in the microposts controller"  do
         describe "submit to the create action" do
           before { post microposts_path}
@@ -110,8 +110,6 @@ describe "Authentication" do
           specify {response.should redirect_to(signin_path)}
         end
       end
-
     end
   end
-
 end
