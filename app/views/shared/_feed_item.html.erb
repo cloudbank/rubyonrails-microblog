@@ -1,5 +1,5 @@
 <li id="<%= feed_item.id %>">
-	<%= link_to gravatar_for(feed_item.user), feed_item.user %>
+	<%= link_to gravatar_for(feed_item.user, size:  40), feed_item.user %>
 	<span class="user">
 	<%= link_to feed_item.user.name, feed_item.user %>
 	</span>
@@ -12,4 +12,5 @@
 	<% if current_user?(feed_item.user) %>
 		<%= link_to "delete", feed_item, method: :delete,confirm: "You sure?",title: feed_item.content %>
 	<% end %>
+	
 </li>

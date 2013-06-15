@@ -1,16 +1,29 @@
 # == Schema Information
+
 #
+
 # Table name: users
+
 #
+
 #  id              :integer          not null, primary key
+
 #  name            :string(255)
+
 #  email           :string(255)
+
 #  created_at      :datetime         not null
+
 #  updated_at      :datetime         not null
+
 #  password_digest :string(255)
+
 #  remember_token  :string(255)
+
 #
+
 require 'spec_helper'
+
 describe User do
   before { @user = User.new(name: "Example User", email: "user@example.com",  password: "foobar", password_confirmation: "foobar") }
   subject { @user }
@@ -117,17 +130,9 @@ describe User do
       let(:unfolllowed_post)   do
         FactoryGirl.create(:micropost, user: FactoryGirl.create(:user))
       end
-
-      its(:feed) [ should include(newer_micropost)]
-      its(:feed) [ should include(older_micropost)]
-      its(:feed) [ should_not include(unfolllowed_post)]
+      its(:feed) { should include(newer_micropost)}
+      its(:feed) { should include(older_micropost)}
+      its(:feed) { should_not include(unfolllowed_post)}
     end
-
-
   end
-
-
-
-
-
 end

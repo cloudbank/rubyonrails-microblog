@@ -1,5 +1,4 @@
 require 'spec_helper'
-
 describe "Authentication" do
   subject { page }
   describe "signin page" do
@@ -105,6 +104,7 @@ describe "Authentication" do
         describe "submit to destroy action" do
           before do
             micropost = FactoryGirl.create(:micropost)
+
             delete micropost_path(micropost)
           end
           specify {response.should redirect_to(signin_path)}
@@ -112,4 +112,5 @@ describe "Authentication" do
       end
     end
   end
+
 end
