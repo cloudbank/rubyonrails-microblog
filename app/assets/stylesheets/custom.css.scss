@@ -49,19 +49,35 @@ h1 {
 }
 
 h2 {
-  font-size: 1.7em;
-  letter-spacing: -1px;
+  font-size: 1.5em;
+  letter-spacing: 1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
   color: $grayLight;
 }
+.btn-primary {
+  background: $grayLight;
+  border-color:$white;
 
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
 }
 
+.btn-primary:hover {
+  background: $white;
+  color: $grayDarker;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1em;
+}
+
+ a {
+    color:  $grayLight;
+    &:hover {
+      color: $grayDarker;
+    }
+  }
 
 /* header */
 
@@ -69,7 +85,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: $grayLight;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -242,5 +258,12 @@ aside {
   textarea {
     height: 100px;
     margin-bottom: 5px;
+  }
+}
+section {
+  ul {
+    text-align:left;
+    list-style:square;
+    font-size: .9em;
   }
 }
