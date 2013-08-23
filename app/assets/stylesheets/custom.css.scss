@@ -18,7 +18,14 @@ html {
 
 body {
   padding-top: 60px;
-}
+  background: -webkit-linear-gradient(225deg, grey, #eaeaea 20%, white 70%, white);
+  background: -o-linear-gradient(225deg, grey, #eaeaea 20%, white 70%, white);
+  background: linear-gradient(225deg, grey, #eaeaea 20%, white 70%, white);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+ }
+ 
 
 section {
   overflow: auto;
@@ -72,13 +79,19 @@ p {
   font-size: 1em;
   line-height: 1em;
 }
+.general-p {
+   color: black;
+}
+.general-p a:hover {
+  color:$grayDarker;
 
+}
  a {
-    color:  $grayLight;
+    color: $grayDarker;
     &:hover {
-      color: $grayDarker;
+      color:  $grayLight;
     }
-  }
+}
 
 /* header */
 
@@ -86,9 +99,10 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: $grayLight;
+  background: linear-gradient(1 left, 2 red, 3 blue 4 30%, 5 green);
+
   text-transform: uppercase;
-  letter-spacing: -1px;
+  letter-spacing: 1px;
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
@@ -96,7 +110,7 @@ p {
     color: white;
     text-decoration: none;
   }
-}
+ }
 
 /* footer */
 
@@ -104,9 +118,9 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
+  color: white;
   a {
-    color: $gray;
+    color: $grayDarker;
     &:hover {
       color: $grayDarker;
     }
